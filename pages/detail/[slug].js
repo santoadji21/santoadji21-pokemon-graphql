@@ -27,7 +27,7 @@ export default function Detail({ data }) {
   const [isFalseCatch, setIsFalseCatch] = useState(false);
 
   function catchPokemon() {
-    if (Math.random() >= 0) {
+    if (Math.random() >= 0.5) {
       setIsOpen(true);
       setIsFalseCatch(false);
     } else {
@@ -65,7 +65,6 @@ export default function Detail({ data }) {
   // console.log(isOpen);
   // console.log("Gagal");
   // console.log(isFalseCatch);
-
 
   const Titlename = data.name.charAt(0).toUpperCase() + data.name.slice(1);
 
