@@ -5,7 +5,7 @@
   "scope": "/",
   "start_url": "/",
   "name": "Pokemon API PWA",
-  "short_name": "PWA",
+  "short_name": "Pokemon",
   "description": "Project Assignment Web Platform Engineers - Tokopedia",
   "icons": [
     {
