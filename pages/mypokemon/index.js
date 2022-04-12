@@ -33,18 +33,24 @@ export default function MyPokemon() {
     <Layout title={"My Pokemon List"}>
       <Hero />
       <div className="container mx-auto">
-        <div className="grid lg:grid-cols-5 md:grid-cols-4  gap-4">
-          {items.map((pokemon) => (
-            <MypokemonCard
-              key={pokemon.owner}
-              name={pokemon.name}
-              image={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemon.id}.svg`}
-              url={pokemon.url}
-              owner={pokemon.owner}
-              release={() => removeItem(pokemon.owner)}
-            />
-          ))}
-        </div>
+        {items.length > 0 ? (
+          <div className="grid lg:grid-cols-5 md:grid-cols-4  gap-4">
+            {items.map((pokemon) => (
+              <MypokemonCard
+                key={pokemon.owner}
+                name={pokemon.name}
+                image={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemon.id}.svg`}
+                url={pokemon.url}
+                owner={pokemon.owner}
+                release={() => removeItem(pokemon.owner)}
+              />
+            ))}
+          </div>
+        ) : (
+          <div className="text-center">
+            <h1 className="text-3xl font-bold">You don`t have any pokemon</h1>
+          </div>
+        )}
       </div>
       <Footer />
     </Layout>
