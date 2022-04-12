@@ -33,7 +33,7 @@ export default function MyPokemon() {
     <Layout title={"My Pokemon List"}>
       <Hero />
       <div className="container mx-auto">
-        {items.length > 0 ? (
+        {items !== null ? (
           <div className="grid lg:grid-cols-5 md:grid-cols-4  gap-4">
             {items.map((pokemon) => (
               <MypokemonCard
