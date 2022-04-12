@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-hp {
+  @apply bg-green-600;
+}
+.bg-attack {
+  @apply bg-red-600;
+}
+
+.bg-defense {
+  @apply bg-blue-600;
+}
+.bg-special-attack{
+  @apply bg-orange-600;
+}
+.bg-special-defense{
+  @apply bg-purple-600;
+}
+.bg-speed{
+  @apply bg-yellow-600;
+}
